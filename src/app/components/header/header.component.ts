@@ -11,8 +11,7 @@ export class HeaderComponent {
 
     }
 
-    headerToggle(){
+    cabecalhoToggler(){
         const navegacao = document.querySelector('#navegacao')
-
-    }
+        }
     }
