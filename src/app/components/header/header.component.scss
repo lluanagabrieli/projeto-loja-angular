@@ -66,13 +66,25 @@
 }
 
 
-/* div with navbar and input*/
+/* NAVEGAÇÃO E INPUT*/
 .cabecalho-navegacao-input{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding-top: 80px;
+}
+
+.cabecalho-navegacao-mobile {
+    display: none;
+    position: absolute;
+}
+
+.cabecalho-navegacao-mobile div {
+    width: 32px;
+    height: 2px;
+    background-color: #FB555B;
+    margin: 8px;
 }
 
 /* navbar*/
@@ -91,7 +103,10 @@
     text-decoration: none;
     color: black;
     font-size: 1.25rem;
+    //espaçamento entre as letras
+    letter-spacing: 3px;
     font-weight: 400;
+    transition: 0.3s;
   }
 
 .cabecalho-navegacao-item:hover {
@@ -130,6 +145,7 @@ input::placeholder{
     gap: 10px;
     margin-top: -50px;
     width: 100%;
+    padding-right: 40px;
 }
 
 .cabecalho-loja-fisica a{
@@ -143,12 +159,96 @@ input::placeholder{
     font-size: 0.875rem;
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
 }
 
+.cabecalho-loja-fisica-conteudo:hover{
+    color: white;
+}
 // MEDIA QUERIES //
 // MOBILE
-@media (min-width: 290px) and (max-width: 480px){
+@media (min-width: 1px) and (max-width: 449px){
+    //BARRA SOBRE E REDES
+    .cabecalho-redes-sociais-item {
+        font-size: 0.70rem;
+    }
 
+    .cabecalho-redes-sociais-item img {
+        width: 18px;
+    }
+
+    // LOGO DA PÁGINA
+    .cabecalho-logo {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px 0px 0px;
+    }
+
+    //LINK LOJA FÍSICA
+    .cabecalho-loja-fisica{
+        padding-right: 0px;
+        justify-content: center;
+        padding-top: 70px;
+    }
+
+    .cabecalho-loja-fisica i {
+        display: none;
+    }
+
+    .cabecalho-loja-fisica a{
+        font-size: 1rem;
+    }
+
+    .cabecalho-loja-fisica-conteudo {
+        text-align: center;
+    }
+
+    //MENU DE NAVEGAÇÃO
+    .cabecalho-navegacao {
+        display: none;
+    }
+
+    .cabecalho-navegacao.active {
+        position: absolute;
+        top: 240px;
+        left: 0;
+        width: 50vw;
+        height: 50vh;
+        background-color: #FB555B;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .cabecalho-navegacao-item {
+        font-size: 1rem;
+    }
+
+    .cabecalho-navegacao-item i{
+        display: none;
+    }
+
+    .cabecalho-navegacao-mobile {
+        display: block;
+        left: 0;
+        padding-top: 80px;
+    }
+
+    //INPUT DA PÁGINA
+    .cabecalho-input {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+    }
+
+    .cabecalho-input input {
+        width: 60%;
+    }
+}
+
+// Tablets de baixa resolução, celulares
+@media (min-width: 450px) and (max-width: 1023px){
     .cabecalho-redes-sociais-item {
         font-size: 0.75rem;
     }
@@ -184,20 +284,15 @@ input::placeholder{
         display: none;
     }
 
+    .cabecalho-loja-fisica {
+        padding-right: 10px;
+    }
 
-
-
-
-
-
-
-
-
-}
-
-// Tablets de baixa resolução, celulares
-@media (min-width: 482px) and (max-width: 1024px){
-
+    .cabecalho-navegacao-mobile {
+        display: block;
+        left: 10px;
+        padding-top: 60px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px), (min-width: 1281px){
