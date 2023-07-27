@@ -25,11 +25,16 @@
 
     <!-- logo da loja-->
     <div class="cabecalho-logo">
-        <img src="assets/logo_loja.png" alt="logo da loja Armarinhos Ginho">
+        <a href="/"><img src="assets/logo_loja.png" alt="logo da loja Armarinhos Ginho"></a>
     </div>
 
     <!-- menu e barra de pesquisa -->
     <div class="cabecalho-navegacao-input ff-mont" style="min-width: 100%;">
+        <div class="cabecalho-navegacao-mobile" (click) = 'click()'>
+            <div class="linha1"></div>
+            <div class="linha2"></div>
+            <div class="linha3"></div>
+        </div>
         <nav class="cabecalho-navegacao">
             <a class="cabecalho-navegacao-item" href=""><i class="fa-solid fa-pencil"></i><br>papelaria</a>
             <a class="cabecalho-navegacao-item" href=""><i class="fa-solid fa-shirt"></i><br>roupas</a>
@@ -47,7 +52,7 @@
     <div class="cabecalho-loja-fisica">
         <i class="fa-solid fa-store mt-0" style="font-size: 50px;"></i>
         <div class="cabecalho-loja-fisica-conteudo">
-            <a href="#">Loja física </a>
+            <a href="#" class="">Loja física </a>
             <p>Venha nos visitar!</p>
         </div>
     </div>
