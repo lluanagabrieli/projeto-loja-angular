@@ -30,12 +30,12 @@
 
     <!-- menu e barra de pesquisa -->
     <div class="cabecalho-navegacao-input ff-mont" style="min-width: 100%;">
-        <div class="cabecalho-navegacao-mobile" (click) = 'click()'>
+        <div class="cabecalho-navegacao-mobile" (click)="toggleMenu()">
             <div class="linha1"></div>
             <div class="linha2"></div>
             <div class="linha3"></div>
         </div>
-        <nav class="cabecalho-navegacao">
+        <nav [ngClass]="{'cabecalho-navegacao':true, 'active': isMenuOpen}">
             <a class="cabecalho-navegacao-item" href=""><i class="fa-solid fa-pencil"></i><br>papelaria</a>
             <a class="cabecalho-navegacao-item" href=""><i class="fa-solid fa-shirt"></i><br>roupas</a>
             <a class="cabecalho-navegacao-item" href=""><i class="fa-solid fa-scissors"></i><br>costura</a>
