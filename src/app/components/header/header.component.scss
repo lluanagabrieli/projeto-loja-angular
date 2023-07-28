@@ -24,34 +24,7 @@
     width: 30px;
 }
 
-/*.header-menu {
-    display: flex;
-    background-color: blue;
-    width: 100% !important;
-    margin-top: 18%;
-    height: 40%;
-}*/
 
-
-
-/*.headerToggle {
-    cursor: pointer;
-}
-
-.navegacao {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: white;
-    width: 30%;
-    padding-left: 10px;
-    padding-top: 20px;
-}
-
-.navegacao a {
-    color: black;
-    text-decoration: none;
-} */
 
 /* LOGO */
 .cabecalho-logo {
@@ -66,6 +39,7 @@
 }
 
 
+
 /* NAVEGAÇÃO E INPUT*/
 .cabecalho-navegacao-input{
     display: flex;
@@ -76,46 +50,47 @@
 }
 
 .cabecalho-navegacao-mobile {
-    display: none;
     position: absolute;
+    display: block;
+    left: 10px;
+    padding-top: 80px;
+    cursor: pointer;
 }
 
 .cabecalho-navegacao-mobile div {
     width: 32px;
-    height: 2px;
+    height: 3px;
     background-color: #FB555B;
     margin: 8px;
 }
 
-/* navbar*/
-.cabecalho-navegacao {
-    width: 100%;
+.cabecalho-navegacao.active {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    width: 50vw;
+    height: 50vh;
+    background-color: #FB555B;
+    flex-direction: column;
+    gap: 2px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
+
+}
+
+.cabecalho-navegacao {
+    display: none;
 }
 
 .cabecalho-navegacao-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    font-size: 1rem;
     text-decoration: none;
-    color: black;
-    font-size: 1.25rem;
-    //espaçamento entre as letras
-    letter-spacing: 3px;
-    font-weight: 400;
-    transition: 0.3s;
+    color: white;
   }
 
-.cabecalho-navegacao-item:hover {
-    color: #FFFF;
-}
-
 .cabecalho-navegacao-item i{
-    margin-bottom: -33px;
-    font-size: 1.75rem;
+    display: none;
 }
 
 /* input */
@@ -136,7 +111,8 @@ input::placeholder{
     opacity: 0.5;
 }
 
-//////////////////////////////
+
+
 /// LOJA FÍSICA
 .cabecalho-loja-fisica{
     position: fixed;
@@ -165,6 +141,10 @@ input::placeholder{
 .cabecalho-loja-fisica-conteudo:hover{
     color: white;
 }
+
+
+
+
 // MEDIA QUERIES //
 // MOBILE
 @media (min-width: 1px) and (max-width: 449px){
@@ -208,29 +188,12 @@ input::placeholder{
         display: none;
     }
 
-    .cabecalho-navegacao.active {
-        position: absolute;
-        top: 240px;
-        left: 0;
-        width: 50vw;
-        height: 50vh;
-        background-color: #FB555B;
-        flex-direction: column;
-        gap: 2px;
-    }
-
     .cabecalho-navegacao-item {
         font-size: 1rem;
     }
 
     .cabecalho-navegacao-item i{
         display: none;
-    }
-
-    .cabecalho-navegacao-mobile {
-        display: block;
-        left: 0;
-        padding-top: 80px;
     }
 
     //INPUT DA PÁGINA
@@ -248,7 +211,11 @@ input::placeholder{
 }
 
 // Tablets de baixa resolução, celulares
-@media (min-width: 450px) and (max-width: 1023px){
+@media (min-width: 450px) and (max-width: 563px){
+    .cabecalho-navegacao-mobile {
+        padding-top: 60px;
+    }
+
     .cabecalho-redes-sociais-item {
         font-size: 0.75rem;
     }
@@ -288,14 +255,153 @@ input::placeholder{
         padding-right: 10px;
     }
 
+}
+
+@media (min-width: 564px) and (max-width: 866px){
     .cabecalho-navegacao-mobile {
-        display: block;
-        left: 10px;
         padding-top: 60px;
     }
+    .cabecalho-redes-sociais-item {
+        font-size: 0.75rem;
+    }
+
+    .cabecalho-redes-sociais-item img {
+        width: 20px;
+    }
+
+    .cabecalho-logo {
+        padding-left: 5px;
+    }
+
+    .cabecalho-logo img {
+        width: 13rem;
+    }
+
+    .cabecalho-loja-fisica{
+        margin-top: -130px;
+    }
+
+    .cabecalho-input {
+        width: 100%;
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cabecalho-input input {
+        width: 70%;
+    }
+
+    .cabecalho-navegacao {
+        display: none;
+    }
+
+    .cabecalho-loja-fisica {
+        padding-right: 10px;
+    }
+
 }
 
-@media (min-width: 1025px) and (max-width: 1280px), (min-width: 1281px){
+@media (min-width: 867px) and (max-width: 1024px){
+    .cabecalho-navegacao-mobile {
+        display: none;
+    }
+
+    .cabecalho-redes-sociais-item img {
+        width: 20px;
+    }
+
+    .cabecalho-logo {
+        padding-top: 55px;
+        padding-left: 5px;
+    }
+
+    .cabecalho-logo img {
+        width: 13rem;
+    }
+
+    .cabecalho-input {
+        width: 100%;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cabecalho-input input {
+        width: 40%;
+    }
+
+    .cabecalho-navegacao {
+        display: flex;
+        gap: 20px;
+    }
+
+    .cabecalho-navegacao-item {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+        //espaçamento entre as letras
+        letter-spacing: 3px;
+        font-weight: 400;
+        transition: 0.3s;
+      }
+
+    .cabecalho-navegacao-item:hover {
+        color: #FFFF;
+    }
+
+    .cabecalho-navegacao-item i{
+        display: flex;
+        margin-bottom: -33px;
+        font-size: 1.75rem;
+    }
+
+    .cabecalho-loja-fisica {
+        padding-right: 10px;
+    }
 
 }
+
+@media (min-width: 1025px){
+    .cabecalho-navegacao-mobile {
+        display: none;
+    }
+
+    .cabecalho-navegacao {
+        display: flex;
+        gap: 20px;
+    }
+
+    .cabecalho-navegacao-item {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+        //espaçamento entre as letras
+        letter-spacing: 3px;
+        font-weight: 400;
+        transition: 0.3s;
+      }
+
+    .cabecalho-navegacao-item:hover {
+        color: #FFFF;
+    }
+
+    .cabecalho-navegacao-item i{
+        display: flex;
+        margin-bottom: -33px;
+        font-size: 1.75rem;
+    }
+
+}
+
 
