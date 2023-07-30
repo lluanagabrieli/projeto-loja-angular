@@ -1,10 +1,11 @@
 .cabecalho {
-    background-color: #B5D6D6;
-    border-bottom: 3px solid #ffffff;
+    background-color: var(--azul-primario);
+    border-bottom: 3px solid var(--branco-secundario);
     height: 240px;
     width: 100%;
 }
 
+// REDES SOCIAIS
 .cabecalho-redes-sociais {
     display: flex;
     justify-content: flex-end;
@@ -15,7 +16,7 @@
 
 .cabecalho-redes-sociais-item {
     font-size: 1rem;
-    color: black;
+    color: var(--preto);
     font-weight: 400;
     text-decoration: none;
 }
@@ -24,9 +25,7 @@
     width: 30px;
 }
 
-
-
-/* LOGO */
+// LOGO
 .cabecalho-logo {
     position: absolute;
     padding-top: 40px;
@@ -37,8 +36,6 @@
 .cabecalho-logo img {
     width: 15rem;
 }
-
-
 
 /* NAVEGAÇÃO E INPUT*/
 .cabecalho-navegacao-input{
@@ -60,7 +57,7 @@
 .cabecalho-navegacao-mobile div {
     width: 32px;
     height: 3px;
-    background-color: #FB555B;
+    background-color: var(--vermelho-section);
     margin: 8px;
 }
 
@@ -69,14 +66,13 @@
     top: 240px;
     left: 0;
     width: 50vw;
-    height: 50vh;
-    background-color: #FB555B;
+    height: 40vh;
+    background-color: var(--vermelho-section);
     flex-direction: column;
     gap: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .cabecalho-navegacao {
@@ -86,7 +82,7 @@
 .cabecalho-navegacao-item {
     font-size: 1rem;
     text-decoration: none;
-    color: white;
+    color: var(--branco-secundario);
   }
 
 .cabecalho-navegacao-item i{
@@ -94,24 +90,39 @@
 }
 
 /* input */
+.cabecalho-input {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
 .cabecalho-input input {
     border-radius: 15px;
     padding: 6px;
     border: none;
     font-size: 1.063rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 450px;
+    box-shadow: 0px 4px 4px 0px var(--sombra-input);
+    width: 40%;
     height: 40px;
     text-align: start;
     text-indent: 35px;
 }
 
 input::placeholder{
-    color: #000000;
+    color: var(--preto);
     opacity: 0.5;
 }
 
-
+.cabecalho-input button {
+    position: absolute;
+    border: none;
+    background-color: var(--vermelho-section);
+    padding: 4px 12px;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-left: 25%;
+    cursor: pointer;
+}
 
 /// LOJA FÍSICA
 .cabecalho-loja-fisica{
@@ -120,14 +131,15 @@ input::placeholder{
     justify-content: flex-end;
     gap: 10px;
     margin-top: -50px;
-    width: 100%;
+    width: 30%;
     padding-right: 40px;
+    right: 0;
 }
 
 .cabecalho-loja-fisica a{
     font-size: 1.25rem;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--preto);
 }
 
 .cabecalho-loja-fisica-conteudo{
@@ -139,16 +151,18 @@ input::placeholder{
 }
 
 .cabecalho-loja-fisica-conteudo:hover{
-    color: white;
+    color: var(--branco-secundario);
 }
 
-
-
-
 // MEDIA QUERIES //
+
 // MOBILE
-@media (min-width: 1px) and (max-width: 449px){
-    //BARRA SOBRE E REDES
+@media (max-width: 699px){
+    .cabecalho-navegacao-mobile {
+        padding-top: 80px;
+    }
+
+    // REDES SOCIAIS
     .cabecalho-redes-sociais-item {
         font-size: 0.70rem;
     }
@@ -166,9 +180,9 @@ input::placeholder{
 
     //LINK LOJA FÍSICA
     .cabecalho-loja-fisica{
-        padding-right: 0px;
         justify-content: center;
-        padding-top: 70px;
+        width: 100%;
+        padding: 70px 0px 0px 0px;
     }
 
     .cabecalho-loja-fisica i {
@@ -199,23 +213,27 @@ input::placeholder{
     //INPUT DA PÁGINA
     .cabecalho-input {
         position: absolute;
-        width: 100%;
+        width: 60%;
         display: flex;
         justify-content: center;
         padding-top: 80px;
     }
 
     .cabecalho-input input {
-        width: 60%;
+        width: 100%;
+    }
+
+    .cabecalho-input button {
+        margin-left: 70%;
     }
 }
 
-// Tablets de baixa resolução, celulares
-@media (min-width: 450px) and (max-width: 563px){
+@media (min-width: 700px) and (max-width: 866px){
     .cabecalho-navegacao-mobile {
         padding-top: 60px;
     }
 
+    // REDES SOCIAIS
     .cabecalho-redes-sociais-item {
         font-size: 0.75rem;
     }
@@ -224,6 +242,7 @@ input::placeholder{
         width: 20px;
     }
 
+    // LOGO DA PÁGINA
     .cabecalho-logo {
         padding-left: 5px;
     }
@@ -237,14 +256,18 @@ input::placeholder{
     }
 
     .cabecalho-input {
-        width: 100%;
+        width: 70%;
         padding-top: 60px;
         display: flex;
         justify-content: center;
     }
 
     .cabecalho-input input {
-        width: 70%;
+        width: 100%;
+    }
+
+    .cabecalho-input button {
+        margin-left: 60%;
     }
 
     .cabecalho-navegacao {
@@ -254,52 +277,6 @@ input::placeholder{
     .cabecalho-loja-fisica {
         padding-right: 10px;
     }
-
-}
-
-@media (min-width: 564px) and (max-width: 866px){
-    .cabecalho-navegacao-mobile {
-        padding-top: 60px;
-    }
-    .cabecalho-redes-sociais-item {
-        font-size: 0.75rem;
-    }
-
-    .cabecalho-redes-sociais-item img {
-        width: 20px;
-    }
-
-    .cabecalho-logo {
-        padding-left: 5px;
-    }
-
-    .cabecalho-logo img {
-        width: 13rem;
-    }
-
-    .cabecalho-loja-fisica{
-        margin-top: -130px;
-    }
-
-    .cabecalho-input {
-        width: 100%;
-        padding-top: 60px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .cabecalho-input input {
-        width: 70%;
-    }
-
-    .cabecalho-navegacao {
-        display: none;
-    }
-
-    .cabecalho-loja-fisica {
-        padding-right: 10px;
-    }
-
 }
 
 @media (min-width: 867px) and (max-width: 1024px){
@@ -307,11 +284,14 @@ input::placeholder{
         display: none;
     }
 
+    // REDES SOCIAIS
     .cabecalho-redes-sociais-item img {
         width: 20px;
     }
 
+    // LOGO DA PÁGINA
     .cabecalho-logo {
+        width: 25vw;
         padding-top: 55px;
         padding-left: 5px;
     }
@@ -331,6 +311,10 @@ input::placeholder{
         width: 40%;
     }
 
+    .cabecalho-input button {
+        margin-left: 30%;
+    }
+
     .cabecalho-navegacao {
         display: flex;
         gap: 20px;
@@ -343,7 +327,7 @@ input::placeholder{
         align-items: center;
         text-align: center;
         text-decoration: none;
-        color: black;
+        color: var(--preto);
         font-size: 1rem;
         //espaçamento entre as letras
         letter-spacing: 3px;
@@ -352,7 +336,7 @@ input::placeholder{
       }
 
     .cabecalho-navegacao-item:hover {
-        color: #FFFF;
+        color: var(--branco-secundario);
     }
 
     .cabecalho-navegacao-item i{
@@ -363,11 +347,17 @@ input::placeholder{
 
     .cabecalho-loja-fisica {
         padding-right: 10px;
+        width: 25vw;
+        right: 0;
     }
-
 }
 
 @media (min-width: 1025px){
+    // LOGO DA PÁGINA
+    .cabecalho-logo {
+        width: 30vw;
+    }
+
     .cabecalho-navegacao-mobile {
         display: none;
     }
@@ -384,7 +374,7 @@ input::placeholder{
         align-items: center;
         text-align: center;
         text-decoration: none;
-        color: black;
+        color: var(--preto);
         font-size: 1rem;
         //espaçamento entre as letras
         letter-spacing: 3px;
@@ -393,7 +383,7 @@ input::placeholder{
       }
 
     .cabecalho-navegacao-item:hover {
-        color: #FFFF;
+        color: var(--branco-secundario);
     }
 
     .cabecalho-navegacao-item i{
@@ -401,7 +391,4 @@ input::placeholder{
         margin-bottom: -33px;
         font-size: 1.75rem;
     }
-
 }
-
-
