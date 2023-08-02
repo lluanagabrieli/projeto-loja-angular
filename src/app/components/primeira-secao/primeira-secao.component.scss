@@ -7,7 +7,11 @@
 .secao__imagem {
     width: 100%;
     height: 100%;
-    object-fit: cover; //pesquisar
+    object-fit: cover;
+}
+
+.imagem_none {
+    display: none;
 }
 
 .secao_descricao {
@@ -35,5 +39,22 @@
     font-weight: 400;
     margin-top: 15px;
     padding: 12px 26px;
-    align-self: center; //pesquisar
+    align-self: center;
+}
+
+// MEDIA QUERIES //
+
+// MOBILE
+@media (max-width: 699px){
+    .primeira-secao {
+        height: 20vh;
+    }
+
+    .descricao__titulo {
+        font-size: 1rem;
+    }
+
+    .descricao__link {
+        font-size: 8px;
+    }
 }
